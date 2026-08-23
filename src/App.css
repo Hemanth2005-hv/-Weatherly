@@ -103,8 +103,13 @@ input{font-family:inherit}
   position:fixed;inset:0;z-index:0;
   transition:background 1.2s var(--ease);
 }
+.weather-background::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0.18) 0%,rgba(0,0,0,0.05) 40%,rgba(0,0,0,0.22) 100%);
+  pointer-events:none;
+}
 .bg-clear{background:linear-gradient(140deg,#1565c0 0%,#42a5f5 35%,#80d8ff 70%,#29b6f6 100%)}
-.bg-cloudy{background:linear-gradient(140deg,#455a64 0%,#78909c 40%,#b0bec5 80%,#607d8b 100%)}
+.bg-cloudy{background:linear-gradient(140deg,#1a2632 0%,#2c3e50 30%,#3b5060 60%,#1e2d38 100%)}
 .bg-rain{background:linear-gradient(140deg,#0d47a1 0%,#1565c0 35%,#1e88e5 70%,#0d2f5e 100%)}
 .bg-thunderstorm{background:linear-gradient(140deg,#1a0a2e 0%,#2d1b69 40%,#1a237e 80%,#0d0d1a 100%)}
 .bg-snow{background:linear-gradient(140deg,#78909c 0%,#b0bec5 40%,#eceff1 80%,#90a4ae 100%)}
