@@ -88,24 +88,17 @@ const Footer = ({ unit, theme }) => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="footer-bottom">
-        <p className="footer-copyright">
-          © {currentYear} Weatherly. Built with{' '}
-          <FiHeart className="footer-heart" /> using React + Vite
+      <div className="footer-bottom">          <p className="footer-copyright">
+          © 2026 Weatherly. All Rights Reserved.
         </p>
         <div className="footer-bottom-links">
-          <span className="footer-credit">
-            Weather data from{' '}
-            <a
-              href="https://open-meteo.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open-Meteo
-            </a>
-          </span>
-          <span className="footer-separator">•</span>
-          <span className="footer-credit">No API key needed</span>
+          <a href="#" className="footer-credit">Terms of Use</a>
+          <span className="footer-separator">|</span>
+          <a href="#" className="footer-credit">Privacy Policy</a>
+          <span className="footer-separator">|</span>
+          <a href="#" className="footer-credit">Cookie Policy</a>
+          <span className="footer-separator">|</span>
+          <a href="#" className="footer-credit">Data Sources</a>
         </div>
       </div>
     </motion.footer>
