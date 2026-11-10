@@ -189,14 +189,11 @@ weather-app/
 │   │   ├── weatherApi.js          # Open-Meteo API client (geocoding, forecast, parsing)
 │   │   └── weatherAlertEngine.js  # Alert detection, multi-point monitoring, deduplication
 │   │
-│   ├── utils/                     # Utility Functions
-│   │   ├── weatherCode.js         # WMO weather code → condition/icon/background mapping
-│   │   ├── weatherAlerts.js       # Alert severity evaluation, categories, fingerprints
-│   │   ├── formatters.js          # Temperature, time, wind, visibility formatting
-│   │   └── distance.js            # Haversine distance, grid point generation
-│   │
-│   └── assets/                    # Static assets
-│       └── hero.png               # Hero image
+│   └── utils/                     # Utility Functions
+│       ├── weatherCode.js         # WMO weather code → condition/icon/background mapping
+│       ├── weatherAlerts.js       # Alert severity evaluation, categories, fingerprints
+│       ├── formatters.js          # Temperature, time, wind, visibility formatting
+│       └── distance.js            # Haversine distance, grid point generation
 │
 ├── .gitignore
 ├── package.json
