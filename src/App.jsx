@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { useWeather } from './hooks/useWeather';
 import { useAlerts } from './hooks/useAlerts';
+import { useAirQuality } from './hooks/useAirQuality';
 import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import CurrentWeather from './components/CurrentWeather';
 import WeatherStats from './components/WeatherStats';
 import HourlyForecast from './components/HourlyForecast';
+import AirQuality from './components/AirQuality';
 import DailyForecast from './components/DailyForecast';
 import SunriseSunset from './components/SunriseSunset';
 import FavoriteLocations from './components/FavoriteLocations';
@@ -56,6 +58,8 @@ function App() {
     isLive,
     manualRefresh,
   } = useWeather();
+
+  const { airQuality, loading: airQualityLoading, error: airQualityError } = useAirQuality(currentCity);
 
   const {
     isMonitoring,
@@ -188,6 +192,12 @@ function App() {
               </div>
 
               <HourlyForecast hourly={weather.hourly} unit={unit} />
+
+              <AirQuality
+                airQuality={airQuality}
+                loading={airQualityLoading}
+                error={airQualityError}
+              />
 
               <div className="dashboard-bottom">
                 <DailyForecast daily={weather.daily} unit={unit} />
